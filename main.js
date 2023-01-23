@@ -12,6 +12,13 @@ callAPI = function() {
     // manejar respuesta exitosa
     console.log(response);
   })
+  .catch(function (error) {
+    // manejar error
+    console.log(error);
+  })
+  .then(function () {
+    // siempre sera executado
+  });
   info.innerHTML = "¿Sabías que vaporeon ...."
 };
 
