@@ -13,7 +13,6 @@ callAPI = function() {
     console.log(response);
   })
   info.innerHTML = "¿Sabías que vaporeon ...."
-  
 };
 
 window.callAPI = callAPI;  
