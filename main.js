@@ -1,15 +1,18 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
+import axios from "axios";
 
 let url = "https://pokeapi.co/api/v2/pokemon/"
+
 let reply = document.getElementById("reply");
 let callAPI = document.getElementById("callAPI");
 
-callAPI.onclick = function(){
+callAPI = function() {
   let name = document.getElementById("name");
-  console.log(url + name.value);
-  fetch(url + name.value )
-  .then((response) => response.json())
-  .then((data) => reply.innerHTML = data.id);
-
+  axios.get(url + name.value)
+  .then(function (response) {
+    // manejar respuesta exitosa
+    console.log(response);
+  })
+  
 };
+
+window.callAPI = callAPI;  
