@@ -1,4 +1,3 @@
-import axios from "axios";
 
 let url = "https://pokeapi.co/api/v2/pokemon/"
 
